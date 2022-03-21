@@ -1,64 +1,52 @@
-body {
-    height: 100%;
-    width: 100%;
-    max-width: 1440px;
-    font-size: 15px;
+*{    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'Spartan', serif;
-    
 }
 
-.container {
-    display:flex;   
-    flex-wrap: wrap;    
-    flex-direction: row;  
-    gap: 150px;  
+body{
+    font-size: 15px;
+}
+
+header{
+    display:flex;            
     justify-content:center;
-    align-items: center;
-    margin-top: 40px;
-    
+    padding: 100px 140px 20px;         
 }
-
 .content {
-    display:flex;
-    flex-wrap: wrap;
-    max-width: 400px;
-        
+    width: 50%;        
 }
 
-.content div h1 {
+h1 {
+    width: 70%;
     font-size: 48px;
     color: hsl(300, 49%, 28%);
-    margin-bottom: 10px;
-        
-}
-
-.content div p {
-    margin: 0;
-    line-height: 20px;
-
-}
-
-.content2 {
-    margin-top: 40px;  
     
+            
 }
-
+.content div p {
+    margin: 0px;
+    line-height: 25px;
+    width: 80%;
+    margin-top: 15px;
+}
 .rate {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;  
+    align-items: center;     
     background-color:hsl(300, 24%, 96%);
-    width: 440px;
-    border-radius: 6px;
-    align-items: center;
-    margin: 20px;
-    color:hsl(300, 46%, 26%);
+    padding: 20px 20px 20px 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 14px;
 }
 
 .stars {    
-    padding-left: 30px;
-    display: flex;
+    display: flex;    
     justify-content: space-between;
-    width: 100px;
+    width: 20%;
     margin-right: 30px;
 }
 
@@ -70,36 +58,39 @@ body {
     margin-left: 100px;
 }
 
-.comment {
+main {
     display: flex;
-    margin-top: 60px;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 140px;
+    
 }
 
 .card {       
-    width: 340px;
-    height: 200px;
+    width: 375px;
+    line-height: 28px;
     border: hsl(300, 43%, 22%) solid;
     border-radius: 10px;
-    margin-right: 25px;
     background-color: hsl(300, 43%, 22%);
-    color: hsl(0, 0%, 100%);    
+    color: hsl(0, 0%, 100%);
+    padding: 20px 20px;    
 }
 
 .avatar {
     display: flex;    
-    border-radius: 50%;
-    margin: 25px;
-    font-weight: 500;    
+    align-items: center;
+    margin: 5px 20px;
 }
 
 .avatar > img {
     border-radius: 50%;
+    
 }
 .avatar .title {
     display: inline-flex;
     flex-direction: column;    
-    margin: 5px 20px;
+    margin: 5px 20px;   
 }
 
 .avatar .buyer {
@@ -118,10 +109,57 @@ p {
     margin-top: 40px;
 }
 
-@media (max-width: 375px) {
-    .container {
-      flex-direction: column;
+@media (max-width: 1024px) {    
+    header{
+        flex-direction: column;
     }
-    
-  }
+    .content,
+    .content p{ 
+        width: 100%;  
+        text-align: center;           
+    }
+    h1{
+        width: 100%;
+    }
+    .rate{
+        flex-direction: column;
+        text-align: center;
+    }
+    .two,
+    .three {
+        margin-left: 0px;
+    }
+    .stars {
+        margin-right: 0px;
+        margin-bottom: 8px;
+    }
+    main{
+        flex-direction: column;
+    }
+
+    .card{
+        width: 100%;
+    }
+    .anne{
+        margin-top: 50px;
+    }    
+}
+
+@media (max-width: 552px){
+    header,
+    main{
+        padding: 60px 30px;
+    }    
+    main{
+        margin-top: -80px;
+    }
+    .card{
+        margin-top: 20px;        
+    }
+   
+    h1{
+        font-size: 32px;
+    }
+}
+
 
