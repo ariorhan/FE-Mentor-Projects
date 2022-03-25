@@ -73,6 +73,12 @@ button {
     background-color: hsl(25, 97%, 53%);
     color: white;
     font-size: 15px;
-    letter-spacing: 2px;
-    
+    letter-spacing: 2px;    
 }
+
+button:hover{
+    background-color: white;
+    color: orange;
+    border: white;
+}
+
