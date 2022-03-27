@@ -48,7 +48,7 @@ div > p {
     padding-top: 1.5rem;  
 }
 
-div > .rating {
+.deneme {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,14 +57,24 @@ div > .rating {
     width: 50px;
     height: 50px;
     background-color: hsl(213, 19%, 18%);
+    cursor: pointer;
 }
 
 input {
-    display: none;
+    display: none;    
 }
 
-button {
-    
+input[type="radio"]:checked + .deneme{
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+
+/* input[type="radio"]:checked ~ .deneme{
+    background-color: gray;
+    color: white;
+} */
+
+button {    
     margin-top: 1.5rem;
     width: 100%;
     height: 3rem;
@@ -78,7 +88,30 @@ button {
 
 button:hover{
     background-color: white;
-    color: orange;
+    color: hsl(25, 97%, 53%);
     border: white;
+    cursor: pointer;
 }
 
+.illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(25, 97%, 53%);
+    border-radius: 20px;
+    margin: 2rem 3rem;
+    height: 2rem; 
+}
+
+.thanks {
+    justify-content: center;
+    text-align: center;    
+    margin-top: 3rem;
+}
