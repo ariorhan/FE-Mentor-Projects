@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+:root {
+    /* primary */
+    --orange: hsl(25, 97%, 53%);
+    --btn-light: rgb(39, 55, 71);
+  
+    /* neutral */
+  
+    --main-bg: hsl(216, 12%, 8%);
+    --card-bg: rgb(33, 40, 50);
+    --light-grey: rgb(124, 136, 152);
+    --medium-grey: hsl(216, 12%, 54%);
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+}
+
+body {    
+    height:100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg);
+    
+}
+
+main {
+    max-width: 340px;   
+    color: hsl(217, 12%, 63%);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+}
+
+.hidden {
+    display: none;
+}
+.rating-card {
+    padding: 2rem 1.5rem;
+  }
+
+.thank-you-card {
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.star {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--btn-light);
+       
+}
+h2{
+    color: white;
+    margin-top: 1.5rem;
+}
+
+div > p {
+    margin-top: 0.8rem;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-between;  
+    padding-top: 1.5rem;  
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    font-size: 0.9rem;
+    height: 40px;
+    border-radius: 50%;
+    outline: 0;
+    border: 0;
+}
+
+.rate-btns {
+    margin: 1.5rem 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.btn,
+.btn-full {
+    transition: all 0.3s;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color:var(--btn-light);
+    color: var(--light-grey);
+}
+
+.btn.active {
+    background-color: var(--light-grey);
+    color: white;
+}
+
+.btn-full {
+    padding: 0.7rem 0; 
+    margin-top: 1.5rem;
+    width: 100%;
+    height: 3rem;
+    border: 0;
+    border-radius: 4rem;
+    background-color:var(--orange);
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.1rem;    
+}
+
+.btn:hover:not(.active){
+    background-color: var(--orange);
+    color: white;    
+}
+
+.btn-full:hover {
+    background-color: white;
+    color: var(--orange);
+}
